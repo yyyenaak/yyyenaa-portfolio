@@ -1,31 +1,30 @@
 {
-    "liveSassCompile.settings.formats": [
-        // 기본설정
-        {
-            "format": "expanded",
-            "extensionName": ".css", // 확장자 설정
-            "savePath": "/css" // CSS 파일 저장 경로
-        },
-        // 더 상세하게 설정가능
-        {
-            "format": "compressed",
-            "extensionName": ".min.css",
-            "savePath": "/css"
-        }
-    ],
-    
-    "liveSassCompile.settings.excludeList": [
-        "**/node_modules/**",
-        ".vscode/**",
-        "**/dist/**" ],// dist 디렉토리를 감시 제외
+  "liveSassCompile.settings.formats": [
+    // 기본설정
+    {
+      "format": "expanded",
+      "extensionName": ".css", // 확장자 설정
+      "savePath": "/css" // CSS 파일 저장 경로
+    },
+    // 더 상세하게 설정가능
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css"
+    }
+  ],
 
-    "liveSassCompile.settings.generateMap": false,
-    "liveSassCompile.settings.autoprefix": [
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**",
+    "**/dist/**"
+  ], // dist 디렉토리를 감시 제외
 
-
-    ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.autoprefix": [],
+  "compile-hero.disable-compile-files-on-did-save-code": false
 }
 // format : css로 컴파일하는 종류
-// extensionName : 컴파일 하는 css 이름 (.css로 할경우 scss의 파일명으로 컴파일 된다.) 이름을 추가하면 scss 명 뒤에 이름으로 붙는다. 
+// extensionName : 컴파일 하는 css 이름 (.css로 할경우 scss의 파일명으로 컴파일 된다.) 이름을 추가하면 scss 명 뒤에 이름으로 붙는다.
 // ex) test.scss 이고 extensionName 을 style.css 로 설정하고 컴파일하면 teststyle.css 로 컴파일 된다.
 // savePath : 컴파일 되어 저장되는 경로설정. /는 프로젝트의 폴더를 의미 한다.
