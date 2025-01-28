@@ -5,6 +5,18 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "TheJamsil4Medium";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/LOTTE/TheJamsil2Light.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TheJamsil2Light";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/LOTTE/TheJamsil2Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -28,7 +40,7 @@ body {
 
 body {
   margin: 0;
-  font-family: "TheJamsil5Bold", sans-serif;
+  font-family: "TheJamsil5Bold", "TheJamsil4Medium", "TheJamsil2Light", sans-serif;
   background-color: #1f334b;
   line-height: 1.6;
   display: flex;
@@ -97,6 +109,7 @@ a:hover {
 p {
   margin: 0;
   color: #000000;
+  font-family: "TheJamsil4Medium";
 }
 
 button {
@@ -413,9 +426,50 @@ main .main_top .main_textzone .sub_text2 {
   justify-content: center;
   background-color: #fff;
   box-shadow: 0 0 0.5rem rgba(68, 68, 68, 0.4);
-  font-size: 2rem;
+}
+.card-front .card-title {
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: #1f334b;
+  border-radius: 0.5rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: #333;
+  font-weight: 700;
+  color: #fff;
+}
+.card-front .title-detail {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.75rem;
+  color: #6c757d;
+  font-family: "TheJamsil4Medium";
+}
+.card-front .project_summary {
+  word-break: keep-all;
+}
+.card-front .project_summary .title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.card-front .project_summary .detail {
+  list-style: disc;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  font-family: "TheJamsil4Medium";
+}
+.card-front .teskbox {
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  margin-top: 1rem;
+  background-color: rgba(249, 197, 29, 0.2);
+  border: 1px solid #f9c51d;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-family: "TheJamsil2Light";
 }
 .card-front .card-btn {
   --button_radius: 0.75em;
