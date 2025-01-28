@@ -65,6 +65,16 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.15, black), color-stop(0.46, #6a9fe1), color-stop(0.86, #1c3a94));
 }
+@media (max-width: 768px) {
+  body::-webkit-scrollbar-thumb body::-webkit-scrollbar {
+    display: none;
+  }
+  body::-webkit-scrollbar-thumb body {
+    -ms-overflow-style: none;
+    -webkit-scrollbar-thumb: none;
+    scrollbar-width: none;
+  }
+}
 
 h1,
 h2 {
@@ -430,7 +440,6 @@ main .main_top .main_textzone .sub_text2 {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-color: #fff;
   box-shadow: 0 0 0.5rem rgba(68, 68, 68, 0.4);
 }
@@ -461,6 +470,19 @@ main .main_top .main_textzone .sub_text2 {
 .card-front .project_summary .detail {
   list-style: disc;
   font-size: 0.875rem;
+  font-family: "TheJamsil4Medium";
+}
+.card-front .project_summary .url {
+  padding-left: 0.75rem;
+  margin-top: 1rem;
+  border-left: 4px solid #5385c3;
+  font-size: 0.875rem;
+  color: #5385c3;
+  word-break: break-all;
+}
+.card-front .url > a {
+  color: #5385c3;
+  text-decoration: none;
   font-family: "TheJamsil4Medium";
 }
 .card-front .teskbox {
