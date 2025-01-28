@@ -152,7 +152,7 @@ header {
   display: flex;
   justify-content: space-between;
   height: 4.5rem;
-  padding: 1.25rem 4rem !important;
+  padding: 1.25rem 4rem;
   align-items: center;
   background-color: #1f334b;
   position: fixed;
@@ -162,6 +162,7 @@ header {
   @media (max-width: 768px) {
     justify-content: space-between;
     height: 5rem;
+    padding: 1rem 2rem;
   }
 
   .logo {
@@ -431,7 +432,7 @@ main {
 .mainzone {
   width: 100%;
   max-width: 1000px;
-  padding: 4rem 1.5rem 2rem;
+  padding: 4rem 0rem 2rem;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -461,7 +462,7 @@ main {
 }
 
 .card {
-  width: 25rem;
+  width: 28rem;
   height: 25rem;
   perspective: 1000px;
   position: relative;
