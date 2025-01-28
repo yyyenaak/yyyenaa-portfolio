@@ -41,6 +41,30 @@ body {
   min-height: 100vh;
   max-width: 100%;
 }
+// scroll 커스텀
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #fffff0;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fffff0;
+}
+
+body::-webkit-scrollbar-thumb {
+  z-index: 100;
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.15, rgb(0, 0, 0)),
+    color-stop(0.46, rgb(106, 159, 225)),
+    color-stop(0.86, rgb(28, 58, 148))
+  );
+}
 
 h1,
 h2 {
@@ -115,7 +139,7 @@ header {
   background-color: #1f334b;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 50;
 
   @media (max-width: 768px) {
     justify-content: space-between;
@@ -386,22 +410,12 @@ main {
   padding: 0rem 2rem;
 }
 
-.mainzone,
-.mainzone_5 {
+.mainzone {
   width: 100%;
   max-width: 1000px;
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem 2rem;
   margin: 0 auto;
   box-sizing: border-box;
-
-  &.mainzone_5 {
-    padding: 4rem 1.5rem;
-
-    .career_box {
-      display: flex;
-      align-items: center;
-    }
-  }
 }
 
 .skillzone {
@@ -419,6 +433,85 @@ main {
 .sk_th {
   text-align: left;
   width: 15rem;
+}
+
+.porjectzone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  width: 25rem;
+  height: 25rem;
+  perspective: 1000px;
+
+  &-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  // 버튼 클릭 시 적용될 클래스
+  &.card:active .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  &-front,
+  &-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+
+  &-front {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem rgba(68, 68, 68, 0.4);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  // 버튼 스타일
+  .cardbtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #45a049;
+    }
+
+    &:active {
+      background-color: #3e8e41;
+    }
+  }
+
+  &-back {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #f08a5d;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: rotateY(180deg);
+  }
 }
 
 footer {
