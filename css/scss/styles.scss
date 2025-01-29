@@ -590,6 +590,7 @@ main {
         border-radius: 0.5rem;
         font-size: 1rem;
         color: #fff;
+        letter-spacing: 0.5px;
       }
 
       .title-detail {
@@ -599,6 +600,7 @@ main {
         font-size: 0.75rem;
         color: #6c757d;
         font-family: "TheJamsil4Medium";
+        letter-spacing: 0.5px;
       }
 
       .project_summary {
@@ -607,13 +609,14 @@ main {
         .title {
           margin-bottom: 0.5rem;
           font-size: 1.25rem;
+          letter-spacing: 1px;
         }
 
         .detail {
           list-style: disc;
           font-size: 0.875rem;
           font-family: "TheJamsil4Medium";
-          letter-spacing: 0.5px;
+          letter-spacing: 1px;
         }
 
         .url {

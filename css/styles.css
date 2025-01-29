@@ -529,6 +529,7 @@ main .underbtn:active:after {
   border-radius: 0.5rem;
   font-size: 1rem;
   color: #fff;
+  letter-spacing: 0.5px;
 }
 .porjectzone .card-front .title-detail {
   padding-bottom: 0.5rem;
@@ -537,6 +538,7 @@ main .underbtn:active:after {
   font-size: 0.75rem;
   color: #6c757d;
   font-family: "TheJamsil4Medium";
+  letter-spacing: 0.5px;
 }
 .porjectzone .card-front .project_summary {
   word-break: keep-all;
@@ -544,12 +546,13 @@ main .underbtn:active:after {
 .porjectzone .card-front .project_summary .title {
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
+  letter-spacing: 1px;
 }
 .porjectzone .card-front .project_summary .detail {
   list-style: disc;
   font-size: 0.875rem;
   font-family: "TheJamsil4Medium";
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 .porjectzone .card-front .project_summary .url {
   padding-left: 0.75rem;
