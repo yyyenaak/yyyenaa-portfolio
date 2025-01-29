@@ -449,19 +449,67 @@ main {
 
 .skillzone {
   display: flex;
-  flex-direction: column;
-}
+  justify-content: center;
+  gap: 2rem;
 
-.skillbox {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-}
+  .skill_back {
+    padding: 1.5rem;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1.5rem;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    box-shadow: 1rem 1rem 1rem 0 rgba(68, 68, 68, 0.2);
+    border-radius: 1rem;
+  }
 
-.sk_th {
-  text-align: left;
-  width: 15rem;
+  .sk_title {
+    text-align: left;
+    width: 15rem;
+  }
+
+  .sk_title > h2 {
+    line-height: 1rem;
+  }
+
+  .skill_box {
+    margin-right: 20px;
+    float: left;
+    padding: 0.5rem;
+    position: relative;
+    border-radius: 10px;
+    background-color: hsla(49, 100%, 91%, 0.825);
+    box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sk_detail {
+    float: left;
+    line-height: 3rem;
+  }
+  .sk_detail > li {
+    height: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .sk_detail .logobox {
+    float: left;
+    margin-right: 2rem;
+    width: 56px;
+    height: 56px;
+    padding: 5px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sk_detail > span {
+    font-weight: 300;
+    font-family: "TheJamsil2Light";
+  }
 }
 
 .porjectzone {
@@ -469,119 +517,119 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-}
 
-.card {
-  width: 28rem;
-  height: 25rem;
-  perspective: 1000px;
-  position: relative;
+  .card {
+    width: 28rem;
+    height: 25rem;
+    perspective: 1000px;
+    position: relative;
 
-  &-front {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    box-shadow: 0 0 0.5rem rgba(68, 68, 68, 0.4);
-
-    .card-title {
-      align-self: flex-start;
-      padding: 0.25rem 0.75rem;
-      margin-bottom: 0.5rem;
-      background-color: #1f334b;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-
-      color: #fff;
-    }
-    .title-detail {
-      padding-bottom: 0.5rem;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #ccc;
-      font-size: 0.75rem;
-      color: #6c757d;
-      font-family: "TheJamsil4Medium";
-    }
-
-    .project_summary {
-      word-break: keep-all;
-    }
-    .project_summary .title {
-      margin-bottom: 0.5rem;
-      font-size: 1.25rem;
-    }
-
-    .project_summary .detail {
-      list-style: disc;
-      font-size: 0.875rem;
-      font-family: "TheJamsil4Medium";
-    }
-
-    .project_summary .url {
-      padding-left: 0.75rem;
-      margin-top: 1rem;
-      border-left: 4px solid #5385c3;
-      font-size: 0.875rem;
-      color: #5385c3;
-      word-break: break-all;
-    }
-    .url > a {
-      color: #5385c3;
-      text-decoration: none;
-      font-family: "TheJamsil4Medium";
-    }
-
-    .teskbox {
-      align-self: flex-start;
-      padding: 0.25rem 0.75rem;
-      margin-top: 1rem;
-      background-color: rgba(249, 197, 29, 0.2);
-      border: 1px solid #f9c51d;
-      border-radius: 0.5rem;
-      font-size: 0.875rem;
-      font-weight: 300;
-      font-family: "TheJamsil2Light";
-    }
-
-    .cardbtnzone {
-      margin-top: 1rem;
+    &-front {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      padding: 1rem;
       display: flex;
-      justify-content: flex-end;
+      flex-direction: column;
+      background-color: #fff;
+      box-shadow: 0 0 0.5rem rgba(68, 68, 68, 0.4);
 
-      .card-btn {
-        --button_radius: 0.75em;
-        --button_color: #e8e8e8;
-        --button_outline_color: #000000;
-        font-size: 17px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        border-radius: var(--button_radius);
-        background: var(--button_outline_color);
+      .card-title {
+        align-self: flex-start;
+        padding: 0.25rem 0.75rem;
+        margin-bottom: 0.5rem;
+        background-color: #1f334b;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+
+        color: #fff;
+      }
+      .title-detail {
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid #ccc;
+        font-size: 0.75rem;
+        color: #6c757d;
+        font-family: "TheJamsil4Medium";
       }
 
-      .button_top {
-        display: block;
-        box-sizing: border-box;
-        border: 2px solid var(--button_outline_color);
-        border-radius: var(--button_radius);
-        padding: 0.45em 1em;
-        background: var(--button_color);
-        color: var(--button_outline_color);
-        transform: translateY(-0.2em);
-        transition: transform 0.1s ease;
+      .project_summary {
+        word-break: keep-all;
+      }
+      .project_summary .title {
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
       }
 
-      .card-btn:hover .button_top {
-        transform: translateY(-0.33em);
+      .project_summary .detail {
+        list-style: disc;
+        font-size: 0.875rem;
+        font-family: "TheJamsil4Medium";
       }
 
-      .card-btn:active .button_top {
-        transform: translateY(0);
+      .project_summary .url {
+        padding-left: 0.75rem;
+        margin-top: 1rem;
+        border-left: 4px solid #5385c3;
+        font-size: 0.875rem;
+        color: #5385c3;
+        word-break: break-all;
+      }
+      .url > a {
+        color: #5385c3;
+        text-decoration: none;
+        font-family: "TheJamsil4Medium";
+      }
+
+      .teskbox {
+        align-self: flex-start;
+        padding: 0.25rem 0.75rem;
+        margin-top: 1rem;
+        background-color: rgba(249, 197, 29, 0.2);
+        border: 1px solid #f9c51d;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 300;
+        font-family: "TheJamsil2Light";
+      }
+
+      .cardbtnzone {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-end;
+
+        .card-btn {
+          --button_radius: 0.75em;
+          --button_color: #e8e8e8;
+          --button_outline_color: #000000;
+          font-size: 17px;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+          border-radius: var(--button_radius);
+          background: var(--button_outline_color);
+        }
+
+        .button_top {
+          display: block;
+          box-sizing: border-box;
+          border: 2px solid var(--button_outline_color);
+          border-radius: var(--button_radius);
+          padding: 0.45em 1em;
+          background: var(--button_color);
+          color: var(--button_outline_color);
+          transform: translateY(-0.2em);
+          transition: transform 0.1s ease;
+        }
+
+        .card-btn:hover .button_top {
+          transform: translateY(-0.33em);
+        }
+
+        .card-btn:active .button_top {
+          transform: translateY(0);
+        }
       }
     }
   }
@@ -594,7 +642,8 @@ footer {
   border-top: 1px solid #444;
   font-size: 0.8rem;
   color: $font-color-light;
-}
-footer .copy {
-  color: #fffff0;
+
+  footer .copy {
+    color: #fffff0;
+  }
 }

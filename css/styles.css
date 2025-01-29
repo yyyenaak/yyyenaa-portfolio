@@ -398,19 +398,60 @@ main .main_top .main_textzone .sub_text2 {
 
 .skillzone {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
-
-.skillbox {
-  margin-left: auto;
-  margin-right: auto;
+.skillzone .skill_back {
+  padding: 1.5rem;
+  width: 33%;
   display: flex;
   flex-direction: column;
+  row-gap: 1rem;
+  padding: 1.5rem;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  box-shadow: 1rem 1rem 1rem 0 rgba(68, 68, 68, 0.2);
+  border-radius: 1rem;
 }
-
-.sk_th {
+.skillzone .sk_title {
   text-align: left;
   width: 15rem;
+}
+.skillzone .sk_title > h2 {
+  line-height: 1rem;
+}
+.skillzone .skill_box {
+  margin-right: 20px;
+  float: left;
+  padding: 0.5rem;
+  position: relative;
+  border-radius: 10px;
+  background-color: hsla(49, 100%, 91%, 0.825);
+  box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.skillzone .sk_detail {
+  float: left;
+  line-height: 3rem;
+}
+.skillzone .sk_detail > li {
+  height: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.skillzone .sk_detail .logobox {
+  float: left;
+  margin-right: 2rem;
+  width: 56px;
+  height: 56px;
+  padding: 5px;
+  position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.skillzone .sk_detail > span {
+  font-weight: 300;
+  font-family: "TheJamsil2Light";
 }
 
 .porjectzone {
@@ -419,14 +460,13 @@ main .main_top .main_textzone .sub_text2 {
   justify-content: center;
   gap: 2rem;
 }
-
-.card {
+.porjectzone .card {
   width: 28rem;
   height: 25rem;
   perspective: 1000px;
   position: relative;
 }
-.card-front {
+.porjectzone .card-front {
   position: absolute;
   width: 100%;
   height: auto;
@@ -437,7 +477,7 @@ main .main_top .main_textzone .sub_text2 {
   background-color: #fff;
   box-shadow: 0 0 0.5rem rgba(68, 68, 68, 0.4);
 }
-.card-front .card-title {
+.porjectzone .card-front .card-title {
   align-self: flex-start;
   padding: 0.25rem 0.75rem;
   margin-bottom: 0.5rem;
@@ -446,7 +486,7 @@ main .main_top .main_textzone .sub_text2 {
   font-size: 1rem;
   color: #fff;
 }
-.card-front .title-detail {
+.porjectzone .card-front .title-detail {
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #ccc;
@@ -454,19 +494,19 @@ main .main_top .main_textzone .sub_text2 {
   color: #6c757d;
   font-family: "TheJamsil4Medium";
 }
-.card-front .project_summary {
+.porjectzone .card-front .project_summary {
   word-break: keep-all;
 }
-.card-front .project_summary .title {
+.porjectzone .card-front .project_summary .title {
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
 }
-.card-front .project_summary .detail {
+.porjectzone .card-front .project_summary .detail {
   list-style: disc;
   font-size: 0.875rem;
   font-family: "TheJamsil4Medium";
 }
-.card-front .project_summary .url {
+.porjectzone .card-front .project_summary .url {
   padding-left: 0.75rem;
   margin-top: 1rem;
   border-left: 4px solid #5385c3;
@@ -474,12 +514,12 @@ main .main_top .main_textzone .sub_text2 {
   color: #5385c3;
   word-break: break-all;
 }
-.card-front .url > a {
+.porjectzone .card-front .url > a {
   color: #5385c3;
   text-decoration: none;
   font-family: "TheJamsil4Medium";
 }
-.card-front .teskbox {
+.porjectzone .card-front .teskbox {
   align-self: flex-start;
   padding: 0.25rem 0.75rem;
   margin-top: 1rem;
@@ -490,12 +530,12 @@ main .main_top .main_textzone .sub_text2 {
   font-weight: 300;
   font-family: "TheJamsil2Light";
 }
-.card-front .cardbtnzone {
+.porjectzone .card-front .cardbtnzone {
   margin-top: 1rem;
   display: flex;
   justify-content: flex-end;
 }
-.card-front .cardbtnzone .card-btn {
+.porjectzone .card-front .cardbtnzone .card-btn {
   --button_radius: 0.75em;
   --button_color: #e8e8e8;
   --button_outline_color: #000000;
@@ -506,7 +546,7 @@ main .main_top .main_textzone .sub_text2 {
   border-radius: var(--button_radius);
   background: var(--button_outline_color);
 }
-.card-front .cardbtnzone .button_top {
+.porjectzone .card-front .cardbtnzone .button_top {
   display: block;
   box-sizing: border-box;
   border: 2px solid var(--button_outline_color);
@@ -517,10 +557,10 @@ main .main_top .main_textzone .sub_text2 {
   transform: translateY(-0.2em);
   transition: transform 0.1s ease;
 }
-.card-front .cardbtnzone .card-btn:hover .button_top {
+.porjectzone .card-front .cardbtnzone .card-btn:hover .button_top {
   transform: translateY(-0.33em);
 }
-.card-front .cardbtnzone .card-btn:active .button_top {
+.porjectzone .card-front .cardbtnzone .card-btn:active .button_top {
   transform: translateY(0);
 }
 
@@ -532,7 +572,6 @@ footer {
   font-size: 0.8rem;
   color: #fffff0;
 }
-
-footer .copy {
+footer footer .copy {
   color: #fffff0;
 }
