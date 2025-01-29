@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const mobileMenu = document.querySelector(".mobile_menu");
   const cards = document.querySelectorAll(".card");
+  const titles = document.querySelectorAll(".sk_title");
+  const details = document.querySelectorAll(".sk_detail");
 
   // 햄버거 버튼 클릭 시 메뉴 열기/닫기
   hamburger.addEventListener("click", () => {

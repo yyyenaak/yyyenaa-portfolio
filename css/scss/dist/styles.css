@@ -430,6 +430,7 @@ main .underbtn:active:after {
   justify-content: center;
   gap: 2rem;
   padding: 2rem 3rem;
+  flex-wrap: nowrap;
 }
 .skillzone .skill_back {
   padding: 1.5rem;
@@ -442,6 +443,16 @@ main .underbtn:active:after {
   transition: transform 0.2s linear;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .skillzone {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .skillzone .skill_back {
+    width: 100%;
+  }
 }
 .skillzone .skill_header {
   width: 100%;
@@ -559,6 +570,11 @@ main .underbtn:active:after {
   font-size: 0.875rem;
   font-family: "TheJamsil4Medium";
   letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+  .porjectzone .card-front .project_summary .detail {
+    letter-spacing: 0;
+  }
 }
 .porjectzone .card-front .project_summary .url {
   padding-left: 0.75rem;

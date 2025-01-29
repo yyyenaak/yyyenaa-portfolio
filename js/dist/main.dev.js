@@ -3,7 +3,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   var hamburger = document.querySelector(".hamburger");
   var mobileMenu = document.querySelector(".mobile_menu");
-  var cards = document.querySelectorAll(".card"); // 햄버거 버튼 클릭 시 메뉴 열기/닫기
+  var cards = document.querySelectorAll(".card");
+  var titles = document.querySelectorAll(".sk_title");
+  var details = document.querySelectorAll(".sk_detail"); // 햄버거 버튼 클릭 시 메뉴 열기/닫기
 
   hamburger.addEventListener("click", function () {
     if (mobileMenu.classList.contains("active")) {
