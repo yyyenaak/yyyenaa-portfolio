@@ -122,6 +122,7 @@ ul {
 
   li {
     margin-bottom: 0.5rem;
+    letter-spacing: 1px;
   }
 }
 
@@ -137,6 +138,7 @@ a {
 p {
   margin: 0;
   font-family: "TheJamsil4Medium";
+  letter-spacing: 1px;
 }
 
 button {
@@ -377,61 +379,76 @@ main {
         font-weight: 500;
         line-height: 3rem;
         letter-spacing: 3px;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
 
       .sub_text2 {
         font-size: 1.25rem;
-        opacity: 1;
-        transform: none;
         line-height: 3rem;
         letter-spacing: 3px;
       }
     }
+    .click_me {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      .sub_text4 {
+        font-size: 1rem;
+        line-height: 1;
+        letter-spacing: 2px;
+      }
+    }
   }
-}
 
-.underbtn {
-  border: none;
-  display: block;
-  text-align: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  outline: none;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  font-weight: 700;
-  font-size: 15px;
-  background-color: #222;
-  padding: 17px 60px;
-  margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-
-  span {
+  .underbtn {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
     position: relative;
-    z-index: 1;
-    letter-spacing: 3px;
-  }
+    color: #fff;
 
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 490%;
-    width: 170%;
-    background: #88baf7;
-    transition: all 0.5s ease-in-out;
-    transform: translateX(-98%) translateY(-25%) rotate(45deg);
-    z-index: 0;
-  }
+    background-color: #222;
+    padding: 17px 60px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
-  &:hover:after {
-    transform: translateX(-9%) translateY(-25%) rotate(45deg);
-  }
+    span {
+      position: relative;
+      z-index: 1;
+      letter-spacing: 3px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
 
-  &:active:after {
-    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 490%;
+      width: 170%;
+      background: #88baf7;
+      transition: all 0.5s ease-in-out;
+      transform: translateX(-98%) translateY(-25%) rotate(45deg);
+      z-index: 0;
+    }
+
+    &:hover:after {
+      transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    }
+
+    &:active:after {
+      transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    }
   }
 }
 
@@ -540,8 +557,8 @@ main {
   gap: 2rem;
 
   .card {
-    width: 28rem;
-    height: 25rem;
+    width: 30rem;
+    height: 28rem;
     perspective: 1000px;
     position: relative;
     opacity: 0;
@@ -596,6 +613,7 @@ main {
           list-style: disc;
           font-size: 0.875rem;
           font-family: "TheJamsil4Medium";
+          letter-spacing: 0.5px;
         }
 
         .url {
