@@ -100,8 +100,11 @@ h2 {
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
   position: relative;
-  display: table;
   margin: 0 auto 3rem;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -451,13 +454,15 @@ main {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  padding: 2rem 3rem;
+
+  //onmouseover 카드뷰 애니메이션 추가
 
   .skill_back {
     padding: 1.5rem;
     width: 33%;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
     padding: 1.5rem;
     background-color: hsla(0, 0%, 100%, 0.8);
     box-shadow: 1rem 1rem 1rem 0 rgba(68, 68, 68, 0.2);
@@ -478,9 +483,6 @@ main {
     float: left;
     padding: 0.5rem;
     position: relative;
-    border-radius: 10px;
-    background-color: hsla(49, 100%, 91%, 0.825);
-    box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .sk_detail {
@@ -580,6 +582,7 @@ main {
         color: #5385c3;
         text-decoration: none;
         font-family: "TheJamsil4Medium";
+        line-height: 2rem;
       }
 
       .teskbox {
