@@ -622,7 +622,7 @@ main .underbtn:active:after {
   line-height: 2rem;
   word-break: break-word;
 }
-.porjectzone .card-front .teskbox {
+.porjectzone .card-front .taskbox {
   padding: 0.25rem 0.75rem;
   background-color: rgba(248, 152, 42, 0.2);
   border: 1px solid #fbb752;
@@ -631,7 +631,7 @@ main .underbtn:active:after {
   font-weight: 300;
   font-family: "TheJamsil2Light";
 }
-.porjectzone .card-front .teskbox2 {
+.porjectzone .card-front .taskbox2 {
   padding: 0.25rem 0.75rem;
   background-color: rgba(249, 197, 29, 0.2);
   border: 1px solid #fbb752;
