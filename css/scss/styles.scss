@@ -194,6 +194,7 @@ header {
       font-weight: 700;
       color: #fffff0;
       padding: 0 1rem;
+      letter-spacing: 3px;
 
       @media (max-width: 768px) {
         font-size: 1.5rem;
@@ -445,6 +446,10 @@ main {
   padding: 4rem 0rem 2rem;
   margin: 0 auto;
   box-sizing: border-box;
+
+  h1 {
+    letter-spacing: 3px;
+  }
 }
 
 .skillzone {

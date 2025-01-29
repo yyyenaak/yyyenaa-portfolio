@@ -178,6 +178,7 @@ header .Header_navigation .navi_font {
   font-weight: 700;
   color: #fffff0;
   padding: 0 1rem;
+  letter-spacing: 3px;
 }
 @media (max-width: 768px) {
   header .Header_navigation .navi_font {
@@ -404,6 +405,9 @@ main .main_top .main_textzone .sub_text2 {
   padding: 4rem 0rem 2rem;
   margin: 0 auto;
   box-sizing: border-box;
+}
+.mainzone h1 {
+  letter-spacing: 3px;
 }
 
 .skillzone {
