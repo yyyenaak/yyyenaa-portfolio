@@ -544,9 +544,49 @@ main {
   }
 
   .info_title {
-    font-weight: 700;
     font-size: 1rem;
     letter-spacing: 3px;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+    @media (max-width: 768px) {
+      gap: 1rem;
+    }
+  }
+
+  .title_sub {
+    font-family: "TheJamsil4Medium";
+    font-size: 0.875rem;
+    position: relative;
+  }
+
+  .title_sub .subimg {
+    width: 1.5rem;
+    cursor: pointer;
+  }
+
+  .title_sub::after {
+    content: "Email ME 😄"; /* 말풍선 텍스트 */
+    position: absolute;
+    text-align: center;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(40, 53, 85, 0.8);
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 5px 8px 5px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .title_sub:hover::after {
+    opacity: 1;
+    visibility: visible;
   }
 
   .info_text {
