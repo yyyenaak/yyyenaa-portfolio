@@ -463,7 +463,7 @@ main .underbtn:active:after {
   justify-content: flex-start;
   padding: 0.5rem 1.5rem;
   gap: 1rem;
-  width: 250px;
+  width: 280px;
 }
 .aboutzone .info_detail {
   display: flex;
@@ -486,11 +486,15 @@ main .underbtn:active:after {
 .aboutzone .info_title {
   font-weight: 700;
   font-size: 1rem;
+  letter-spacing: 3px;
 }
 .aboutzone .info_text {
   font-family: "TheJamsil4Medium";
   font-size: 0.875rem;
-  white-space: pre-wrap;
+  letter-spacing: 2px;
+}
+.aboutzone .info_text > a {
+  cursor: pointer;
 }
 
 .skillzone {

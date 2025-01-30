@@ -517,7 +517,7 @@ main {
     justify-content: flex-start;
     padding: 0.5rem 1.5rem;
     gap: 1rem;
-    width: 250px;
+    width: 280px;
   }
 
   .info_detail {
@@ -544,12 +544,17 @@ main {
   .info_title {
     font-weight: 700;
     font-size: 1rem;
+    letter-spacing: 3px;
   }
 
   .info_text {
     font-family: "TheJamsil4Medium";
     font-size: 0.875rem;
-    white-space: pre-wrap;
+    letter-spacing: 2px;
+
+    > a {
+      cursor: pointer;
+    }
   }
 }
 
