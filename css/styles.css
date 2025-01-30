@@ -426,7 +426,6 @@ main .underbtn:active:after {
   letter-spacing: 3px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  letter-spacing: 2px;
 }
 
 .aboutzone {
@@ -511,7 +510,6 @@ main .underbtn:active:after {
   }
   .aboutzone .about_col {
     width: 100%;
-    padding: 0 1rem;
   }
   .aboutzone .subname {
     text-align: center;
