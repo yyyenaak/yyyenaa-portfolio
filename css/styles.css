@@ -164,6 +164,7 @@ header .logo {
 @media (max-width: 768px) {
   header .logo {
     font-size: 1rem;
+    padding: 0;
   }
 }
 header .Header_navigation {
@@ -425,6 +426,7 @@ main .underbtn:active:after {
   letter-spacing: 3px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  letter-spacing: 2px;
 }
 
 .aboutzone {
@@ -495,6 +497,52 @@ main .underbtn:active:after {
 }
 .aboutzone .info_text > a {
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .aboutzone {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+  .aboutzone .about_photo {
+    width: 80%;
+    max-width: 250px;
+  }
+  .aboutzone .about_col {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .aboutzone .subname {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .aboutzone .about_wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .aboutzone .about_info {
+    width: 90%;
+    max-width: 320px;
+    justify-content: center;
+  }
+  .aboutzone .info_detail {
+    width: 3rem;
+    height: 3rem;
+  }
+  .aboutzone .info_detail img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .aboutzone .info_side {
+    align-items: center;
+    text-align: center;
+  }
+  .aboutzone .info_text {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+  }
 }
 
 .skillzone {
