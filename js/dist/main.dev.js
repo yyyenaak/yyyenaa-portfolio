@@ -84,3 +84,28 @@ document.addEventListener("DOMContentLoaded", function () {
     return observer.observe(card);
   });
 });
+
+function openPopup() {
+  var modal = document.getElementById("popupModal");
+  modal.style.display = "flex";
+  setTimeout(function () {
+    modal.classList.add("active");
+  }, 10);
+}
+
+function closePopup() {
+  var modal = document.getElementById("popupModal");
+  modal.classList.remove("active");
+  setTimeout(function () {
+    modal.style.display = "none";
+  }, 300);
+} // 배경 클릭 시 모달 닫기
+
+
+window.onclick = function (event) {
+  var modal = document.getElementById("popupModal");
+
+  if (event.target === modal) {
+    closePopup();
+  }
+};

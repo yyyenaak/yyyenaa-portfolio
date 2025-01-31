@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "TheJamsil5Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TheJamsil4Medium";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/LOTTE/TheJamsil2Light.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TheJamsil2Light";
+  src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/LOTTE/TheJamsil2Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* 전체 화면 모달 */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* 활성화된 모달 */
+.modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* 모달 컨텐츠 */
+.modal-content {
+  background: white;
+  width: 60%;
+  max-width: 900px;
+  max-height: 90vh;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* 활성화된 모달 내부 */
+.modal.active .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 모달 내부 스크롤 가능 영역 */
+.modal-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: calc(80vh - 100px);
+}
+
+/* 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+}
+
+.close-btn:hover {
+  color: #1cbd32;
+}

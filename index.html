@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>예나의 포트폴리오</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/popup_styles.css" />
     <script src="js/main.js"></script>
     <link rel="icon" href="img/yy.png" type="image/x-icon" />
   </head>
@@ -303,7 +304,6 @@
             />
             <h1>Projects</h1>
           </div>
-
           <div class="porjectzone">
             <div class="card">
               <div class="card-inner">
@@ -341,13 +341,28 @@
                     </div>
                   </div>
                   <div class="cardbtnzone">
-                    <button class="card-btn">
+                    <button class="card-btn" onclick="openPopup()">
                       <span class="button_top">자세히</span>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- 모달 팝업 -->
+            <div id="popupModal" class="modal">
+              <div class="modal-content">
+                <button class="close-btn" onclick="closePopup()">×</button>
+                <h2>Farmy 프로젝트</h2>
+                <div class="modal-body">
+                  <p>상세 정보</p>
+                  <p>상세 정보</p>
+                  <p>상세 정보</p>
+                  <p>상세 정보</p>
+                  <p>상세 정보</p>
+                </div>
+              </div>
+            </div>
+
             <div class="card">
               <div class="card-inner">
                 <div class="card-front">
@@ -373,7 +388,7 @@
                     </div>
                   </div>
                   <div class="cardbtnzone">
-                    <button class="card-btn">
+                    <button class="card-btn" onclick="openNewWindow()">
                       <span class="button_top">자세히</span>
                     </button>
                   </div>
@@ -406,7 +421,7 @@
                     <div class="taskbox">HTML, CSS, JS, PHP</div>
                   </div>
                   <div class="cardbtnzone">
-                    <button class="card-btn">
+                    <button class="card-btn" onclick="openNewWindow()">
                       <span class="button_top">자세히</span>
                     </button>
                   </div>
@@ -434,7 +449,7 @@
                     <div class="taskbox">HTML, CSS, JS</div>
                   </div>
                   <div class="cardbtnzone">
-                    <button class="card-btn">
+                    <button class="card-btn" onclick="openPopup()">
                       <span class="button_top">자세히</span>
                     </button>
                   </div>
@@ -462,7 +477,7 @@
                     <div class="taskbox">React, Tsx, JS, SCSS</div>
                   </div>
                   <div class="cardbtnzone">
-                    <button class="card-btn">
+                    <button class="card-btn" onclick="openPopup()">
                       <span class="button_top">자세히</span>
                     </button>
                   </div>
@@ -490,7 +505,7 @@
                     <div class="taskbox">React, Tsx, JS, SCSS</div>
                   </div>
                   <div class="cardbtnzone">
-                    <button class="card-btn">
+                    <button class="card-btn" onclick="openPopup()">
                       <span class="button_top">자세히</span>
                     </button>
                   </div>
