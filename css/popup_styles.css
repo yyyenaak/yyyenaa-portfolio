@@ -120,13 +120,8 @@
 }
 .modal-body .modal-detail {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.8rem;
   flex-direction: column;
-}
-.modal-body .modal-detail > h3 {
-  font-size: 1.5rem;
-  margin: 0;
-  padding-bottom: 0.3rem;
 }
 .modal-body .modal-detail > p {
   letter-spacing: 1px;
@@ -134,13 +129,21 @@
 .modal-body .modal-detail .detail-text {
   letter-spacing: 1px;
 }
-.modal-body .modal-detail .detail-text > h3 {
+.modal-body .modal-detail .detail-text > ul {
   font-size: 1.5rem;
   margin: 0;
   padding-bottom: 0.3rem;
 }
-.modal-body .modal-detail .detail-text > p {
+.modal-body .modal-detail .detail-text > li {
   letter-spacing: 1px;
+  list-style: none;
+  padding-left: 10px;
+  font-family: "TheJamsil4Medium";
+  padding-left: 0.5rem;
+}
+.modal-body .modal-detail .detail-text li::before {
+  content: "✅"; /* Custom Marker */
+  padding-right: 0.5rem;
 }
 .modal-body .modal-detail .modal_url {
   padding-left: 0.75rem;
