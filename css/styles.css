@@ -731,7 +731,7 @@ main .underbtn:active:after {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -797,15 +797,6 @@ main .underbtn:active:after {
   word-break: break-word;
 }
 .porjectzone .card-front .taskbox {
-  padding: 0.25rem 0.75rem;
-  background-color: rgba(248, 152, 42, 0.2);
-  border: 1px solid #fbb752;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 300;
-  font-family: "TheJamsil2Light";
-}
-.porjectzone .card-front .taskbox2 {
   padding: 0.25rem 0.75rem;
   background-color: rgba(249, 197, 29, 0.2);
   border: 1px solid #fbb752;
