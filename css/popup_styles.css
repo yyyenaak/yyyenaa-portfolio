@@ -120,7 +120,7 @@
 }
 .modal-body .modal-detail {
   display: flex;
-  gap: 0.8rem;
+  gap: 1.2rem;
   flex-direction: column;
 }
 .modal-body .modal-detail > p {
@@ -152,86 +152,6 @@
   font-size: 1.5rem;
   margin: 0;
   padding-bottom: 0.3rem;
-}
-.modal-body .modal-detail .detail-img .slider_wrap {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.modal-body .modal-detail .detail-img .slider_img {
-  position: relative;
-  width: 20rem;
-  overflow: hidden;
-}
-.modal-body .modal-detail .detail-img .slider_inner {
-  display: flex;
-  flex-wrap: nowrap; /* 줄바꿈 방지 */
-  transition: transform 0.4s ease-in-out; /* 애니메이션 효과 추가 */
-  width: 60rem; /* 이미지 개수만큼 가로 크기 설정 */
-}
-.modal-body .modal-detail .detail-img .slider {
-  width: 20rem;
-  flex-shrink: 0; /* 크기 유지 */
-  text-align: center;
-}
-.modal-body .modal-detail .detail-img .slider img {
-  width: 100%;
-  display: block;
-}
-.modal-body .modal-detail .detail-img .slider .slider_text {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-}
-.modal-body .modal-detail .detail-img .slider_btn {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  opacity: 1; /* 항상 보이도록 설정 */
-  transition: none; /* 투명도 변화 제거 */
-}
-.modal-body .modal-detail .detail-img .slider_btn a {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-  transition: 0.3s;
-}
-.modal-body .modal-detail .detail-img .slider_btn a:hover {
-  background-color: #16189c;
-  color: white;
-}
-.modal-body .modal-detail .detail-img .slider_dot {
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translateX(-50%);
-  display: flex;
-}
-.modal-body .modal-detail .detail-img .slider_dot .dot {
-  width: 1rem;
-  height: 1rem;
-  background-color: rgba(255, 255, 255, 0.3);
-  display: inline-block;
-  border-radius: 50%;
-  text-indent: -9999px;
-  transition: all 0.3s;
-  margin: 2px;
-  cursor: pointer;
-}
-.modal-body .modal-detail .detail-img .slider_dot .dot.active {
-  background-color: #fff;
 }
 .modal-body .modal-detail .modal_url {
   padding-left: 0.75rem;
