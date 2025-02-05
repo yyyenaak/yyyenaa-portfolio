@@ -200,7 +200,24 @@
 .modal-body .modal-detail .detail-img .next {
   right: 10px;
 }
-.modal-body .modal-detail .modal_url {
+.modal-body .modal-detail .detail-img .slide-discription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal-body .modal-detail .detail-img .slide-discription > span {
+  font-size: 1.1rem;
+  font-family: "TheJamsil5Bold";
+  padding-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+.modal-body .modal-detail .detail-img .slide-discription > p {
+  font-size: 1rem;
+  font-family: "TheJamsil4Medium";
+  padding-bottom: 0.3rem;
+  letter-spacing: 1px;
+}
+.modal-body .modal_url {
   padding-left: 0.75rem;
   border-left: 4px solid #5385c3;
   font-size: 1rem;
@@ -210,14 +227,15 @@
   max-width: 100%;
   margin-left: 0.5rem;
 }
-.modal-body .modal-detail .modal_url a {
+.modal-body .modal_url a {
   color: #5385c3;
   text-decoration: none;
   font-family: "TheJamsil4Medium";
   line-height: 2rem;
   word-break: break-word;
 }
-.modal-body .modal_taskbox {
+
+.modal_taskbox {
   padding: 0.25rem 1rem;
   background-color: rgba(249, 197, 29, 0.2);
   border: 1px solid #fbb752;

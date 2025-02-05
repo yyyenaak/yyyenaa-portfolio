@@ -213,39 +213,58 @@
       .next {
         right: 10px;
       }
-    }
+      .slide-discription {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
-    .modal_url {
-      padding-left: 0.75rem;
-      border-left: 4px solid #5385c3;
-      font-size: 1rem;
-      color: #5385c3;
-      word-break: break-word;
-      display: block;
-      max-width: 100%;
-      margin-left: 0.5rem;
+        > span {
+          font-size: 1.1rem;
+          font-family: "TheJamsil5Bold";
+          padding-bottom: 0.5rem;
+          letter-spacing: 2px;
+        }
 
-      a {
-        color: #5385c3;
-        text-decoration: none;
-        font-family: "TheJamsil4Medium";
-        line-height: 2rem;
-        word-break: break-word;
+        > p {
+          font-size: 1rem;
+          font-family: "TheJamsil4Medium";
+          padding-bottom: 0.3rem;
+          letter-spacing: 1px;
+        }
       }
     }
   }
 
-  .modal_taskbox {
-    padding: 0.25rem 1rem;
-    background-color: rgba(249, 197, 29, 0.2);
-    border: 1px solid #fbb752;
-    border-radius: 0.5rem;
+  .modal_url {
+    padding-left: 0.75rem;
+    border-left: 4px solid #5385c3;
     font-size: 1rem;
-    font-weight: 300;
-    width: 95%;
+    color: #5385c3;
+    word-break: break-word;
+    display: block;
+    max-width: 100%;
     margin-left: 0.5rem;
-    font-family: "TheJamsil2Light";
+
+    a {
+      color: #5385c3;
+      text-decoration: none;
+      font-family: "TheJamsil4Medium";
+      line-height: 2rem;
+      word-break: break-word;
+    }
   }
+}
+
+.modal_taskbox {
+  padding: 0.25rem 1rem;
+  background-color: rgba(249, 197, 29, 0.2);
+  border: 1px solid #fbb752;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 95%;
+  margin-left: 0.5rem;
+  font-family: "TheJamsil2Light";
 }
 
 /* 반응형: 모바일 버전 스타일 조정 */
