@@ -154,6 +154,9 @@
   padding-bottom: 0.3rem;
 }
 .modal-body .modal-detail .detail-img .slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 100%;
   max-width: 50rem;
@@ -178,7 +181,7 @@
 }
 .modal-body .modal-detail .detail-img .slider img {
   max-height: 25rem;
-  max-width: 30rem;
+  max-width: 25rem;
 }
 .modal-body .modal-detail .detail-img .prev,
 .modal-body .modal-detail .detail-img .next {

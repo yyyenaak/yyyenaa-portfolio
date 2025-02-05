@@ -167,6 +167,9 @@
         padding-bottom: 0.3rem;
       }
       .slider-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         width: 100%;
         max-width: 50rem;
@@ -191,7 +194,7 @@
       }
       .slider img {
         max-height: 25rem;
-        max-width: 30rem;
+        max-width: 25rem;
       }
       .prev,
       .next {
