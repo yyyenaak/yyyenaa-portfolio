@@ -878,7 +878,7 @@ main .underbtn:active:after {
   display: scroll;
   position: fixed;
   bottom: 30px;
-  right: 20px;
+  right: 30px;
 }
 .top .top_btn {
   width: 3rem;
