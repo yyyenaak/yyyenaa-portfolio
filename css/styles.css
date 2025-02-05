@@ -867,6 +867,17 @@ main .underbtn:active:after {
   }
 }
 
+.top {
+  display: scroll;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+.top .top_btn {
+  width: 3rem;
+  height: 3rem;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
