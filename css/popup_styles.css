@@ -213,6 +213,7 @@
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
+  z-index: 100;
 }
 .modal-body .modal-detail .detail-img .slider-container .prev {
   left: 10px;
