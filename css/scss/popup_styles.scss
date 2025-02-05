@@ -176,60 +176,72 @@
         height: 26rem;
         margin: auto;
         overflow: hidden;
-      }
-      .slider {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-      .slide {
-        min-width: 100%;
-        text-align: center;
-        display: none;
-      }
-      .slide:nth-child(1) {
-        display: flex;
-        gap: 3rem;
-        justify-content: center;
-        align-items: center;
-      }
-      .slider img {
-        max-height: 25rem;
-        max-width: 25rem;
-      }
-      .prev,
-      .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(32, 30, 86, 0.822);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-      }
-      .prev {
-        left: 10px;
-      }
-      .next {
-        right: 10px;
-      }
-      .slide-discription {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
 
-        > span {
-          font-size: 1.1rem;
-          font-family: "TheJamsil5Bold";
-          padding-bottom: 0.5rem;
-          letter-spacing: 2px;
+        .slider-wrapper {
+          width: 100%;
+          overflow: hidden;
         }
 
-        > p {
-          font-size: 1rem;
-          font-family: "TheJamsil4Medium";
-          padding-bottom: 0.3rem;
-          letter-spacing: 1px;
+        .slider {
+          display: flex;
+
+          transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+          width: 100%;
+          display: flex;
+          flex-shrink: 0;
+          gap: 3rem;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        .slide img {
+          max-height: 25rem;
+          max-width: 25rem;
+        }
+
+        .slide-description {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          > span {
+            font-size: 1.1rem;
+            font-family: "TheJamsil5Bold";
+            padding-bottom: 0.5rem;
+            letter-spacing: 2px;
+          }
+
+          > p {
+            font-size: 1rem;
+            font-family: "TheJamsil4Medium";
+            padding-bottom: 0.3rem;
+            letter-spacing: 1px;
+          }
+        }
+
+        .prev,
+        .next {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(32, 30, 86, 0.822);
+          color: white;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+
+        .prev {
+          left: 10px;
+        }
+
+        .next {
+          right: 10px;
         }
       }
     }

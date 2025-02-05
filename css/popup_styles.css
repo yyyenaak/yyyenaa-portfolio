@@ -164,27 +164,46 @@
   margin: auto;
   overflow: hidden;
 }
-.modal-body .modal-detail .detail-img .slider {
+.modal-body .modal-detail .detail-img .slider-container .slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.modal-body .modal-detail .detail-img .slider-container .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-.modal-body .modal-detail .detail-img .slide {
-  min-width: 100%;
-  text-align: center;
-  display: none;
-}
-.modal-body .modal-detail .detail-img .slide:nth-child(1) {
+.modal-body .modal-detail .detail-img .slider-container .slide {
+  width: 100%;
   display: flex;
+  flex-shrink: 0;
   gap: 3rem;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
-.modal-body .modal-detail .detail-img .slider img {
+.modal-body .modal-detail .detail-img .slider-container .slide img {
   max-height: 25rem;
   max-width: 25rem;
 }
-.modal-body .modal-detail .detail-img .prev,
-.modal-body .modal-detail .detail-img .next {
+.modal-body .modal-detail .detail-img .slider-container .slide-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal-body .modal-detail .detail-img .slider-container .slide-description > span {
+  font-size: 1.1rem;
+  font-family: "TheJamsil5Bold";
+  padding-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+.modal-body .modal-detail .detail-img .slider-container .slide-description > p {
+  font-size: 1rem;
+  font-family: "TheJamsil4Medium";
+  padding-bottom: 0.3rem;
+  letter-spacing: 1px;
+}
+.modal-body .modal-detail .detail-img .slider-container .prev,
+.modal-body .modal-detail .detail-img .slider-container .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -193,29 +212,13 @@
   border: none;
   padding: 10px;
   cursor: pointer;
+  border-radius: 5px;
 }
-.modal-body .modal-detail .detail-img .prev {
+.modal-body .modal-detail .detail-img .slider-container .prev {
   left: 10px;
 }
-.modal-body .modal-detail .detail-img .next {
+.modal-body .modal-detail .detail-img .slider-container .next {
   right: 10px;
-}
-.modal-body .modal-detail .detail-img .slide-discription {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.modal-body .modal-detail .detail-img .slide-discription > span {
-  font-size: 1.1rem;
-  font-family: "TheJamsil5Bold";
-  padding-bottom: 0.5rem;
-  letter-spacing: 2px;
-}
-.modal-body .modal-detail .detail-img .slide-discription > p {
-  font-size: 1rem;
-  font-family: "TheJamsil4Medium";
-  padding-bottom: 0.3rem;
-  letter-spacing: 1px;
 }
 .modal-body .modal_url {
   padding-left: 0.75rem;
