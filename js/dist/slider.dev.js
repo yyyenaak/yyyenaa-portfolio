@@ -1,35 +1,32 @@
 "use strict";
 
 var sliderWrap = document.querySelector(".slider_wrap");
-var sliderImg = sliderWrap.querySelector(".slider_img"); // 보여지는 영역
-
-var sliderInner = sliderWrap.querySelector(".slider_inner"); // 움직이는 영역
-
-var slider = sliderWrap.querySelectorAll(".slider"); // 개별 영역
-
+var sliderImg = sliderWrap.querySelector(".slider_img");
+var sliderInner = sliderWrap.querySelector(".slider_inner");
+var slider = sliderWrap.querySelectorAll(".slider");
 var sliderDot = sliderWrap.querySelector(".slider_dot");
 var sliderBtn = sliderWrap.querySelectorAll(".slider_btn a");
-var currentIndex = 0; // 현재 보이는 이미지
+var currentIndex = 0;
+var sliderCount = slider.length;
+var sliderWidth = slider[0].offsetWidth; // 슬라이드 크기 조정
 
-var sliderCount = slider.length; // 이미지 갯수
-
-var sliderWidth = slider[0].offsetWidth; // 이미지 가로값
-
-var sliderInterval = 1000; // 이미지 변경 시간
-
-var dotIndex = ""; // 초기화 함수
-
-function init() {
-  // 이미지 갯수만큼 닷 메뉴 생성
-  slider.forEach(function () {
-    return dotIndex += "<a href='#' class='dot'>이미지</a>";
-  });
-  sliderDot.innerHTML = dotIndex; // 첫번째 닷 메뉴에 활성화 표시
-
-  sliderDot.firstChild.classList.add("active");
+function updateSliderWidth() {
+  sliderWidth = slider[0].offsetWidth;
+  sliderInner.style.width = "".concat(sliderWidth * sliderCount, "px");
 }
 
-init(); // 이미지 이동시키기 (GSAP 적용)
+updateSliderWidth(); // 초기화 함수
+
+function init() {
+  var dotIndex = "";
+  slider.forEach(function (_, index) {
+    dotIndex += "<a href=\"#\" class=\"dot\" data-index=\"".concat(index, "\"></a>");
+  });
+  sliderDot.innerHTML = dotIndex;
+  sliderDot.children[0].classList.add("active");
+}
+
+init(); // 이미지 이동시키기
 
 function gotoSlider(num) {
   gsap.to(sliderInner, {
@@ -38,16 +35,17 @@ function gotoSlider(num) {
   });
   currentIndex = num;
   var dotActive = document.querySelectorAll(".slider_dot .dot");
-  dotActive.forEach(function (active) {
-    return active.classList.remove("active");
+  dotActive.forEach(function (dot) {
+    return dot.classList.remove("active");
   });
   dotActive[num].classList.add("active");
-} // 버튼을 클릭했을 때 동작
+} // 버튼 클릭 이벤트
 
 
-sliderBtn.forEach(function (btn, index) {
-  btn.addEventListener("click", function () {
-    var prevIndex = (currentIndex + sliderCount - 1) % sliderCount;
+sliderBtn.forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    var prevIndex = (currentIndex - 1 + sliderCount) % sliderCount;
     var nextIndex = (currentIndex + 1) % sliderCount;
 
     if (btn.classList.contains("prev")) {
@@ -56,4 +54,14 @@ sliderBtn.forEach(function (btn, index) {
       gotoSlider(nextIndex);
     }
   });
-});
+}); // 닷 클릭 이벤트
+
+document.querySelectorAll(".slider_dot .dot").forEach(function (dot) {
+  dot.addEventListener("click", function (e) {
+    e.preventDefault();
+    var index = parseInt(dot.getAttribute("data-index"));
+    gotoSlider(index);
+  });
+}); // 창 크기 변경 시 슬라이드 크기 다시 계산
+
+window.addEventListener("resize", updateSliderWidth);
