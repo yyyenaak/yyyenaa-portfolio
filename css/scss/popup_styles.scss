@@ -126,6 +126,19 @@
   overflow-y: auto;
   max-height: calc(90vh - 100px);
 
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(41, 45, 71);
+    border-radius: 4px;
+  }
+
   .modal-detail {
     display: flex;
     gap: 1.2rem;
