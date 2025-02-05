@@ -257,6 +257,32 @@
         .next {
           right: 10px;
         }
+        @media (max-width: 768px) {
+          .slider-container {
+            height: 20rem;
+          }
+
+          .slide {
+            flex-direction: column;
+            gap: 1.5rem;
+          }
+
+          .slide img {
+            max-height: 20rem;
+            max-width: 20rem;
+          }
+
+          .slide-description {
+            text-align: center;
+            align-items: center;
+          }
+
+          .prev,
+          .next {
+            padding: 6px;
+            font-size: 1rem;
+          }
+        }
       }
     }
   }

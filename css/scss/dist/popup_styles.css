@@ -232,6 +232,28 @@
 .modal-body .modal-detail .detail-img .slider-container .next {
   right: 10px;
 }
+@media (max-width: 768px) {
+  .modal-body .modal-detail .detail-img .slider-container .slider-container {
+    height: 20rem;
+  }
+  .modal-body .modal-detail .detail-img .slider-container .slide {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .modal-body .modal-detail .detail-img .slider-container .slide img {
+    max-height: 20rem;
+    max-width: 20rem;
+  }
+  .modal-body .modal-detail .detail-img .slider-container .slide-description {
+    text-align: center;
+    align-items: center;
+  }
+  .modal-body .modal-detail .detail-img .slider-container .prev,
+.modal-body .modal-detail .detail-img .slider-container .next {
+    padding: 6px;
+    font-size: 1rem;
+  }
+}
 .modal-body .modal_url {
   padding-left: 0.75rem;
   border-left: 4px solid #5385c3;
