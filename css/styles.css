@@ -546,10 +546,17 @@ main .underbtn:active:after {
   cursor: pointer;
 }
 .aboutzone .values {
-  font-family: "TheJamsil4Medium";
-  font-size: 1.25rem;
   letter-spacing: 2px;
-  width: 80%;
+  width: 68%;
+  padding-top: 0.5rem;
+}
+.aboutzone .values > span {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.aboutzone .values > p {
+  font-family: "TheJamsil4Medium";
+  font-size: 1rem;
 }
 @media (max-width: 768px) {
   .aboutzone {
@@ -604,6 +611,9 @@ main .underbtn:active:after {
   }
   .aboutzone .values {
     width: 100%;
+  }
+  .aboutzone .values > p {
+    text-align: left;
   }
 }
 
