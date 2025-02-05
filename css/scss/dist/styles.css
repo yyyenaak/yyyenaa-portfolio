@@ -333,7 +333,7 @@ main .main_top .main_textzone {
   padding: 3rem 1rem;
 }
 main .main_top .main_textzone .main_text {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
   padding-bottom: 2rem;
   line-height: 3.5rem;
@@ -351,7 +351,7 @@ main .main_top .main_textzone .sub_text {
   }
 }
 main .main_top .main_textzone .sub_text2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 3rem;
   letter-spacing: 3px;
 }
@@ -445,6 +445,7 @@ main .underbtn:active:after {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-right: 1rem;
 }
 .aboutzone .about_row {
   display: flex;
@@ -458,6 +459,7 @@ main .underbtn:active:after {
 }
 .aboutzone .about_col {
   width: 600px;
+  display: flex;
 }
 .aboutzone .about_col .subname {
   line-height: 2rem;
@@ -472,7 +474,7 @@ main .underbtn:active:after {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .aboutzone .about_info {
   display: flex;
@@ -555,7 +557,7 @@ main .underbtn:active:after {
 .aboutzone .values {
   letter-spacing: 2px;
   width: 68%;
-  padding-top: 0.5rem;
+  padding-top: 2rem;
 }
 .aboutzone .values > span {
   font-size: 1.5rem;

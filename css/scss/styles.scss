@@ -365,7 +365,7 @@ main {
       padding: 3rem 1rem;
 
       .main_text {
-        font-size: 3.5rem;
+        font-size: 4rem;
         font-weight: 700;
         padding-bottom: 2rem;
         line-height: 3.5rem;
@@ -384,7 +384,7 @@ main {
       }
 
       .sub_text2 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         line-height: 3rem;
         letter-spacing: 3px;
       }
@@ -489,6 +489,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-right: 1rem;
   }
 
   .about_row {
@@ -505,6 +506,7 @@ main {
 
   .about_col {
     width: 600px;
+    display: flex;
 
     .subname {
       line-height: 2rem;
@@ -522,7 +524,7 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     align-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .about_info {
@@ -621,7 +623,7 @@ main {
   .values {
     letter-spacing: 2px;
     width: 68%;
-    padding-top: 0.5rem;
+    padding-top: 2rem;
 
     > span {
       font-size: 1.5rem;
