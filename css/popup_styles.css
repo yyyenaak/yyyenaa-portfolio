@@ -260,7 +260,7 @@
   }
   .modal-body .modal-detail .detail-img .slider-container .prev,
   .modal-body .modal-detail .detail-img .slider-container .next {
-    padding: 6px;
+    padding: 9px;
     font-size: 1rem;
   }
 }
