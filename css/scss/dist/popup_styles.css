@@ -147,14 +147,19 @@
 .modal-body .modal-detail .detail-text > li {
   letter-spacing: 1px;
   list-style: none;
-  padding-left: 10px;
-  font-family: "TheJamsil4Medium";
   padding-left: 0.5rem;
+  font-family: "TheJamsil4Medium";
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 .modal-body .modal-detail .detail-text li::before {
   content: "✅";
-  /* Custom Marker */
-  padding-right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+.modal-body .modal-detail .detail-text > li > span {
+  font-family: "TheJamsil5Bold";
 }
 .modal-body .modal-detail .detail-img {
   letter-spacing: 1px;
@@ -187,7 +192,7 @@
   width: 100%;
   display: flex;
   flex-shrink: 0;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -197,9 +202,11 @@
   max-width: 25rem;
 }
 .modal-body .modal-detail .detail-img .slider-container .slide-description {
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
 }
 .modal-body .modal-detail .detail-img .slider-container .slide-description > span {
   font-size: 1.1rem;
@@ -208,10 +215,30 @@
   letter-spacing: 2px;
 }
 .modal-body .modal-detail .detail-img .slider-container .slide-description > p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "TheJamsil4Medium";
   padding-bottom: 0.3rem;
   letter-spacing: 1px;
+}
+.modal-body .modal-detail .detail-img .slider-container .slide-description > ul {
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: "TheJamsil4Medium";
+  padding-bottom: 0.1rem;
+  letter-spacing: 1px;
+}
+.modal-body .modal-detail .detail-img .slider-container .slide-description > ul > li {
+  padding-left: 15px;
+  font-size: 0.8rem;
+  font-family: "TheJamsil4Medium";
+  margin: 0;
+  letter-spacing: 1px;
+}
+.modal-body .modal-detail .detail-img .slider-container .slide-description > ul > li::before {
+  content: "🔑";
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
 }
 .modal-body .modal-detail .detail-img .slider-container .prev,
 .modal-body .modal-detail .detail-img .slider-container .next {
