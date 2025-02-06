@@ -193,7 +193,7 @@
         position: relative;
         width: 100%;
         max-width: 50rem;
-        height: 26rem;
+        height: auto;
         margin: auto;
         overflow: hidden;
 
@@ -290,7 +290,7 @@
         }
         @media (max-width: 768px) {
           .slider-container {
-            height: 20rem;
+            height: auto;
           }
 
           .slide {
@@ -304,6 +304,7 @@
           }
 
           .slide-description {
+            width: auto;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -316,14 +317,16 @@
               letter-spacing: 1px;
             }
 
-            > p {
+            > p,
+            ul,
+            li {
               display: none;
             }
           }
 
           .prev,
           .next {
-            padding: 9px;
+            padding: 10px;
             font-size: 1rem;
           }
         }
