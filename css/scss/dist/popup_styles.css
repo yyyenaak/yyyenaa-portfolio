@@ -199,7 +199,6 @@
 .modal-body .modal-detail .detail-img .slider-container .slide img {
   max-height: 25rem;
   max-width: 25rem;
-  width: 100%;
 }
 .modal-body .modal-detail .detail-img .slider-container .slide-description {
   width: 500px;
@@ -269,7 +268,6 @@
   }
   .modal-body .modal-detail .detail-img .slider-container .slide img {
     max-height: 20rem;
-    max-width: 20rem;
   }
   .modal-body .modal-detail .detail-img .slider-container .slide-description {
     width: auto;
