@@ -570,6 +570,8 @@ main .underbtn:active:after {
   .aboutzone .about_photo {
     width: 80%;
     max-width: 250px;
+    padding: 0;
+    padding-bottom: 1rem;
   }
   .aboutzone .about_col {
     width: 100%;
@@ -741,7 +743,7 @@ main .underbtn:active:after {
 .porjectzone .card-front {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 450px;
   border-radius: 10px;
   padding: 1.5rem;
   display: flex;
@@ -800,6 +802,9 @@ main .underbtn:active:after {
   word-break: break-word;
   display: block;
   max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .porjectzone .card-front .project_summary .url a {
   color: #5385c3;
@@ -807,6 +812,10 @@ main .underbtn:active:after {
   font-family: "TheJamsil4Medium";
   line-height: 2rem;
   word-break: break-word;
+}
+.porjectzone .card-front .project_summary .url p {
+  color: #ff4d4d;
+  font-size: 0.6rem;
 }
 .porjectzone .card-front .taskbox {
   padding: 0.25rem 0.75rem;
@@ -816,9 +825,6 @@ main .underbtn:active:after {
   font-size: 0.875rem;
   font-weight: 300;
   font-family: "TheJamsil2Light";
-  height: 3.5rem;
-  display: flex;
-  align-items: center;
 }
 .porjectzone .card-front .cardbtnzone {
   margin-top: 1rem;
@@ -859,6 +865,9 @@ main .underbtn:active:after {
     width: 100%;
     height: auto;
     margin-bottom: 2rem;
+  }
+  .porjectzone .card-front {
+    height: auto;
   }
   .porjectzone .project_summary {
     gap: 0.5rem;
