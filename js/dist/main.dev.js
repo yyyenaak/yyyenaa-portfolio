@@ -52,8 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var isOpen = detail.classList.contains("show");
       document.querySelectorAll(".sk_detail").forEach(function (d) {
         if (d !== detail) {
-          d.style.maxHeight = "0px"; // 닫을 때 높이 0으로 설정
-
+          d.style.maxHeight = "0px";
           d.classList.remove("show");
         }
       });
@@ -91,23 +90,26 @@ function openPopup(modalId) {
   setTimeout(function () {
     modal.classList.add("active");
   }, 10);
-} // Modal 닫기
+} // Modal 닫기 (X 버튼 클릭 시)
 
 
-function closePopup(modalId) {
-  var modal = document.getElementById(modalId);
-  modal.classList.remove("active");
-  setTimeout(function () {
-    modal.style.display = "none";
-  }, 300);
-} // 배경 클릭 시 해당 모달 닫기
+document.querySelectorAll(".close-btn").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var modal = this.closest(".modal"); // 현재 버튼이 속한 모달 찾기
 
-
-window.onclick = function (event) {
-  var modals = document.querySelectorAll(".modal");
-  modals.forEach(function (modal) {
-    if (event.target === modal) {
+    if (modal) {
       closePopup(modal.id);
     }
   });
-};
+}); // Modal 닫기 함수
+
+function closePopup(modalId) {
+  var modal = document.getElementById(modalId);
+
+  if (modal) {
+    modal.classList.remove("active");
+    setTimeout(function () {
+      modal.style.display = "none";
+    }, 300);
+  }
+}
