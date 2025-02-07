@@ -83,29 +83,31 @@ document.addEventListener("DOMContentLoaded", function () {
   cards.forEach(function (card) {
     return observer.observe(card);
   });
-});
+}); // Modal 열기
 
-function openPopup() {
-  var modal = document.getElementById("popupModal");
+function openPopup(modalId) {
+  var modal = document.getElementById(modalId);
   modal.style.display = "flex";
   setTimeout(function () {
     modal.classList.add("active");
   }, 10);
-}
+} // Modal 닫기
 
-function closePopup() {
-  var modal = document.getElementById("popupModal");
+
+function closePopup(modalId) {
+  var modal = document.getElementById(modalId);
   modal.classList.remove("active");
   setTimeout(function () {
     modal.style.display = "none";
   }, 300);
-} // 배경 클릭 시 모달 닫기
+} // 배경 클릭 시 해당 모달 닫기
 
 
 window.onclick = function (event) {
-  var modal = document.getElementById("popupModal");
-
-  if (event.target === modal) {
-    closePopup();
-  }
+  var modals = document.querySelectorAll(".modal");
+  modals.forEach(function (modal) {
+    if (event.target === modal) {
+      closePopup(modal.id);
+    }
+  });
 };

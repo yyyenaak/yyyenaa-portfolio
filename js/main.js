@@ -90,26 +90,30 @@ document.addEventListener("DOMContentLoaded", () => {
   cards.forEach((card) => observer.observe(card));
 });
 
-function openPopup() {
-  let modal = document.getElementById("popupModal");
+// Modal 열기
+function openPopup(modalId) {
+  let modal = document.getElementById(modalId);
   modal.style.display = "flex";
   setTimeout(() => {
     modal.classList.add("active");
   }, 10);
 }
 
-function closePopup() {
-  let modal = document.getElementById("popupModal");
+// Modal 닫기
+function closePopup(modalId) {
+  let modal = document.getElementById(modalId);
   modal.classList.remove("active");
   setTimeout(() => {
     modal.style.display = "none";
   }, 300);
 }
 
-// 배경 클릭 시 모달 닫기
+// 배경 클릭 시 해당 모달 닫기
 window.onclick = function (event) {
-  let modal = document.getElementById("popupModal");
-  if (event.target === modal) {
-    closePopup();
-  }
+  let modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
+    if (event.target === modal) {
+      closePopup(modal.id);
+    }
+  });
 };
