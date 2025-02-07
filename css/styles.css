@@ -816,6 +816,9 @@ main .underbtn:active:after {
   font-size: 0.875rem;
   font-weight: 300;
   font-family: "TheJamsil2Light";
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
 }
 .porjectzone .card-front .cardbtnzone {
   margin-top: 1rem;
