@@ -892,6 +892,21 @@ main {
           font-size: 0.875rem;
           font-family: "TheJamsil4Medium";
           letter-spacing: 1px;
+
+          > li {
+            list-style: none;
+            padding-left: 0.5rem;
+
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+          }
+
+          li::before {
+            content: "✅";
+            display: inline-flex;
+            align-items: center;
+          }
         }
 
         @media (max-width: 768px) {

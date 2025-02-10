@@ -789,6 +789,18 @@ main .underbtn:active:after {
   font-family: "TheJamsil4Medium";
   letter-spacing: 1px;
 }
+.porjectzone .card-front .project_summary .detail > li {
+  list-style: none;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.porjectzone .card-front .project_summary .detail li::before {
+  content: "✅";
+  display: inline-flex;
+  align-items: center;
+}
 @media (max-width: 768px) {
   .porjectzone .card-front .project_summary .detail {
     letter-spacing: 0;
