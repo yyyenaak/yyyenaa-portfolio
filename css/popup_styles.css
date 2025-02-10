@@ -281,6 +281,9 @@
   display: block;
   max-width: 100%;
   margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .modal-body .modal_url a {
   color: #5385c3;
@@ -288,6 +291,10 @@
   font-family: "TheJamsil4Medium";
   line-height: 2rem;
   word-break: break-word;
+}
+.modal-body .modal_url p {
+  color: #ff4d4d;
+  font-size: 0.8rem;
 }
 
 .modal_taskbox {
