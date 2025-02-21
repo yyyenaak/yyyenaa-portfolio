@@ -1,4 +1,4 @@
-# 🌟 yyyenaa.com - 포트폴리오  
+# 🌟 yyyenaa-Portfolio 
 
 ## 🖥️ 프로젝트 소개  
 **"직관적인 애니메이션과 인터랙티브한 UI를 갖춘 반응형 맞춤 포트폴리오"**  
@@ -12,13 +12,15 @@ yyyenaa.com은 **프로젝트 카드 애니메이션과 Modal창 기능**을 활
 📅 2025.01 - 2025.02  
 
 
-## ⚙️ 개발 환경  
+## ⚙️ 개발 환경 
+<p>
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/css-663399?style=for-the-badge&logo=css&logoColor=white">
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
 <img src="https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
-- Git & GitHub  
-
+<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> 
+</p>
 
 ## 📌 주요 기능  
 
