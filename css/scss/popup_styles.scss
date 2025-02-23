@@ -319,7 +319,7 @@
     max-width: 100%;
     margin-left: 0.5rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 
     a {
@@ -328,6 +328,9 @@
       font-family: "TheJamsil4Medium";
       line-height: 2rem;
       word-break: break-word;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 5rem;
     }
     p {
       color: #ff4d4d;

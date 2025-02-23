@@ -808,6 +808,32 @@ main .underbtn:active:after {
   display: inline-flex;
   align-items: center;
 }
+.porjectzone .card-front .project_summary .url {
+  padding-left: 0.75rem;
+  border-left: 4px solid #5385c3;
+  font-size: 0.875rem;
+  color: #5385c3;
+  word-break: break-word;
+  display: block;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.porjectzone .card-front .project_summary .url a {
+  color: #5385c3;
+  text-decoration: none;
+  font-family: "TheJamsil4Medium";
+  line-height: 2rem;
+  word-break: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.porjectzone .card-front .project_summary .url p {
+  color: #ff4d4d;
+  font-size: 0.6rem;
+}
 @media (max-width: 768px) {
   .porjectzone .card-front .project_summary .detail {
     letter-spacing: 0;
@@ -822,7 +848,7 @@ main .underbtn:active:after {
   display: block;
   max-width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
 }
 .porjectzone .card-front .project_summary .url a {
@@ -831,6 +857,9 @@ main .underbtn:active:after {
   font-family: "TheJamsil4Medium";
   line-height: 2rem;
   word-break: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .porjectzone .card-front .project_summary .url p {
   color: #ff4d4d;
