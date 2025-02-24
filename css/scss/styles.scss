@@ -363,52 +363,50 @@ main {
 
     .main_textzone {
       padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
 
-      @keyframes typing {
+      @keyframes fadeTyping {
         from {
-          width: 0;
+          opacity: 0;
+          transform: translateY(5px);
         }
         to {
-          width: 100%;
+          opacity: 1;
+          transform: translateY(0);
         }
       }
 
-      @keyframes blink {
-        50% {
-          border-color: transparent;
-        }
-      }
-
-      // @keyframes sparkle {
-      //   0%,
-      //   100% {
-      //     color: #2973cc;
-      //     text-shadow: 0 0 5px #2973cc, 0 0 10px #2973cc;
-      //   }
-      //   50% {
-      //     color: #1a4c82;
-      //     text-shadow: 0 0 2px #1a4c82, 0 0 5px #1a4c82;
-      //   }
-      // }
-
-      // 타자기 애니메이션 효과
+      .sub_text2,
       .main_text {
         display: inline-block;
-        font-size: 2rem;
-        font-weight: bold;
         white-space: nowrap;
         overflow: hidden;
-        border-right: 2px solid var(--main-color);
-        width: 0;
-        animation: typing 2s steps(4) forwards, blink 0.7s infinite;
       }
+
+      // Yena, Jo (첫 번째 글자)
+      .sub_text2 {
+        font-size: 1.5rem;
+        line-height: 3rem;
+        letter-spacing: 3px;
+      }
+
+      // 조예나 (두 번째 글자)
       .main_text {
         font-size: 4rem;
         font-weight: 700;
         padding-bottom: 2rem;
         line-height: 3.5rem;
         letter-spacing: 5px;
-        animation: typing 2s steps(4) forwards, blink 0.7s infinite;
+        opacity: 0;
+      }
+
+      // 개별 글자 효과 적용
+      .sub_text2 span,
+      .main_text span {
+        display: inline-block;
+        opacity: 0;
+        animation: fadeTyping 0.3s forwards;
       }
 
       .sub_text {
@@ -427,12 +425,6 @@ main {
         @media (max-width: 768px) {
           display: none;
         }
-      }
-
-      .sub_text2 {
-        font-size: 1.5rem;
-        line-height: 3rem;
-        letter-spacing: 3px;
       }
     }
     .click_me {

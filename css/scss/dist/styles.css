@@ -331,29 +331,29 @@ main .main_top {
 }
 main .main_top .main_textzone {
   padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
-@keyframes typing {
+@keyframes fadeTyping {
   from {
-    width: 0;
+    opacity: 0;
+    transform: translateY(5px);
   }
   to {
-    width: 100%;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
+main .main_top .main_textzone .sub_text2,
 main .main_top .main_textzone .main_text {
   display: inline-block;
-  font-size: 2rem;
-  font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid var(--main-color);
-  width: 0;
-  animation: typing 2s steps(4) forwards, blink 0.7s infinite;
+}
+main .main_top .main_textzone .sub_text2 {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  letter-spacing: 3px;
 }
 main .main_top .main_textzone .main_text {
   font-size: 4rem;
@@ -361,7 +361,13 @@ main .main_top .main_textzone .main_text {
   padding-bottom: 2rem;
   line-height: 3.5rem;
   letter-spacing: 5px;
-  animation: typing 2s steps(4) forwards, blink 0.7s infinite;
+  opacity: 0;
+}
+main .main_top .main_textzone .sub_text2 span,
+main .main_top .main_textzone .main_text span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeTyping 0.3s forwards;
 }
 main .main_top .main_textzone .sub_text {
   font-size: 1.5rem;
@@ -379,11 +385,6 @@ main .main_top .main_textzone .sub_text .hello_text {
   main .main_top .main_textzone .sub_text {
     display: none;
   }
-}
-main .main_top .main_textzone .sub_text2 {
-  font-size: 1.5rem;
-  line-height: 3rem;
-  letter-spacing: 3px;
 }
 main .main_top .click_me {
   display: flex;

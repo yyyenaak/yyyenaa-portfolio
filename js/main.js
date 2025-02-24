@@ -4,9 +4,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
   const skillBacks = document.querySelectorAll(".skill_back");
 
-  // 조예나 이름 타자기 효과
-  const text = document.querySelector(".main_text");
-  text.style.width = text.scrollWidth + "px";
+  function revealText(element, delay, showElement = false) {
+    const letters = element.textContent.split("");
+    element.textContent = ""; // 기존 텍스트 비우기
+
+    if (showElement) {
+      element.style.opacity = "1"; // "조예나" 나타나도록 설정
+    }
+
+    letters.forEach((letter, index) => {
+      const span = document.createElement("span");
+      span.textContent = letter;
+      span.style.animationDelay = `${delay + index * 0.2}s`; // 0.2초 간격으로 등장
+      element.appendChild(span);
+    });
+  }
+
+  // "Yena, Jo" 먼저 등장
+  revealText(document.querySelector(".sub_text2"), 1);
+
+  // 1초 후 등장
+  setTimeout(() => {
+    revealText(document.querySelector(".main_text"), 1, true);
+  }, 2000);
 
   // 햄버거 버튼 클릭 시 네비 열기/닫기
   hamburger.addEventListener("click", () => {
