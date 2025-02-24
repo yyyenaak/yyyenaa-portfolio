@@ -372,7 +372,7 @@ main .main_top .main_textzone {
 @keyframes fadeSlideIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -401,8 +401,8 @@ main .main_top .main_textzone .main_text span {
 main .main_top .main_textzone .sub_text,
 main .main_top .main_textzone .click_me {
   opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 main .main_top .main_textzone .sub_text.show,
 main .main_top .main_textzone .click_me.show {
@@ -419,7 +419,6 @@ main .main_top .main_textzone .sub_text .hello_text {
   color: #2973cc;
   text-decoration-line: underline;
   text-decoration-color: rgb(24, 69, 103);
-  animation: sparkle 1.5s infinite alternate;
 }
 @media (max-width: 768px) {
   main .main_top .main_textzone .sub_text {
