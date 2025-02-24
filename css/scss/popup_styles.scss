@@ -203,7 +203,6 @@
 
         .slider {
           display: flex;
-
           transition: transform 0.5s ease-in-out;
         }
 
@@ -220,6 +219,7 @@
 
         .slide img {
           max-height: 20rem;
+          max-width: 18rem;
         }
 
         .slide-description {
