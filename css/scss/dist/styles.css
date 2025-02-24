@@ -332,18 +332,48 @@ main .main_top {
 main .main_top .main_textzone {
   padding: 3rem 1rem;
 }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+main .main_top .main_textzone .main_text {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--main-color);
+  width: 0;
+  animation: typing 2s steps(4) forwards, blink 0.7s infinite;
+}
 main .main_top .main_textzone .main_text {
   font-size: 4rem;
   font-weight: 700;
   padding-bottom: 2rem;
   line-height: 3.5rem;
   letter-spacing: 5px;
+  animation: typing 2s steps(4) forwards, blink 0.7s infinite;
 }
 main .main_top .main_textzone .sub_text {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 3rem;
   letter-spacing: 3px;
+}
+main .main_top .main_textzone .sub_text .hello_text {
+  color: #2973cc;
+  text-decoration-line: underline;
+  text-decoration-color: #184567;
+  animation: sparkle 1.5s infinite alternate;
 }
 @media (max-width: 768px) {
   main .main_top .main_textzone .sub_text {

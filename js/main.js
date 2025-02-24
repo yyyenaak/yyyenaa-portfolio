@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
   const skillBacks = document.querySelectorAll(".skill_back");
 
+  // 조예나 이름 타자기 효과
+  const text = document.querySelector(".main_text");
+  text.style.width = text.scrollWidth + "px";
+
   // 햄버거 버튼 클릭 시 네비 열기/닫기
   hamburger.addEventListener("click", () => {
     if (mobileMenu.classList.contains("active")) {
@@ -13,14 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 네비 열기
   function openMenu() {
     hamburger.classList.add("active");
     mobileMenu.classList.remove("closing");
     mobileMenu.classList.add("active");
   }
 
-  // 네비 닫기
   function closeMenu() {
     hamburger.classList.remove("active");
     mobileMenu.classList.remove("active");
@@ -88,34 +90,34 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   cards.forEach((card) => observer.observe(card));
-});
 
-// Modal 열기
-function openPopup(modalId) {
-  let modal = document.getElementById(modalId);
-  modal.style.display = "flex";
-  setTimeout(() => {
-    modal.classList.add("active");
-  }, 10);
-}
-
-// Modal 닫기 (X 버튼 클릭 시)
-document.querySelectorAll(".close-btn").forEach((btn) => {
-  btn.addEventListener("click", function () {
-    let modal = this.closest(".modal"); // 현재 버튼이 속한 모달 찾기
-    if (modal) {
-      closePopup(modal.id);
-    }
-  });
-});
-
-// Modal 닫기 함수
-function closePopup(modalId) {
-  let modal = document.getElementById(modalId);
-  if (modal) {
-    modal.classList.remove("active");
+  // Modal 열기
+  function openPopup(modalId) {
+    let modal = document.getElementById(modalId);
+    modal.style.display = "flex";
     setTimeout(() => {
-      modal.style.display = "none";
-    }, 300);
+      modal.classList.add("active");
+    }, 10);
   }
-}
+
+  // Modal 닫기 (X 버튼 클릭 시)
+  document.querySelectorAll(".close-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      let modal = this.closest(".modal");
+      if (modal) {
+        closePopup(modal.id);
+      }
+    });
+  });
+
+  // Modal 닫기 함수
+  function closePopup(modalId) {
+    let modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.remove("active");
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 300);
+    }
+  }
+});
