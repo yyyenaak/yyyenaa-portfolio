@@ -329,6 +329,27 @@ main .main_top {
   flex-direction: column;
   justify-content: center;
 }
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+main .main_top .sub_text,
+main .main_top .click_me {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+main .main_top .sub_text.show,
+main .main_top .click_me.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 main .main_top .main_textzone {
   padding: 3rem 1rem;
   display: flex;
@@ -344,11 +365,25 @@ main .main_top .main_textzone {
     transform: translateY(0);
   }
 }
-main .main_top .main_textzone .sub_text2,
-main .main_top .main_textzone .main_text {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
+@keyframes fadeTyping {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 main .main_top .main_textzone .sub_text2 {
   font-size: 1.5rem;
@@ -368,6 +403,17 @@ main .main_top .main_textzone .main_text span {
   display: inline-block;
   opacity: 0;
   animation: fadeTyping 0.3s forwards;
+}
+main .main_top .main_textzone .sub_text,
+main .main_top .main_textzone .click_me {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+main .main_top .main_textzone .sub_text.show,
+main .main_top .main_textzone .click_me.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 main .main_top .main_textzone .sub_text {
   font-size: 1.5rem;

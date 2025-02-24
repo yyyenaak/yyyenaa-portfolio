@@ -361,6 +361,31 @@ main {
     flex-direction: column;
     justify-content: center;
 
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .sub_text,
+    .click_me {
+      opacity: 0; // 처음에는 숨김 처리
+      transform: translateY(-20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    // 활성화되었을 때 (애니메이션 실행)
+    .sub_text.show,
+    .click_me.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .main_textzone {
       padding: 3rem 1rem;
       display: flex;
@@ -376,22 +401,36 @@ main {
           transform: translateY(0);
         }
       }
-
-      .sub_text2,
-      .main_text {
-        display: inline-block;
-        white-space: nowrap;
-        overflow: hidden;
+      @keyframes fadeTyping {
+        from {
+          opacity: 0;
+          transform: translateY(5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
-      // Yena, Jo (첫 번째 글자)
+      @keyframes fadeSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      // Yena, Jo (첫 번째 타이핑)
       .sub_text2 {
         font-size: 1.5rem;
         line-height: 3rem;
         letter-spacing: 3px;
       }
 
-      // 조예나 (두 번째 글자)
+      // 조예나 (두 번째 타이핑, 초기에는 숨김)
       .main_text {
         font-size: 4rem;
         font-weight: 700;
@@ -401,12 +440,26 @@ main {
         opacity: 0;
       }
 
-      // 개별 글자 효과 적용
+      // 개별 글자 애니메이션
       .sub_text2 span,
       .main_text span {
         display: inline-block;
         opacity: 0;
         animation: fadeTyping 0.3s forwards;
+      }
+      // 숨김 처리
+      .sub_text,
+      .click_me {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      // 타이핑 애니메이션이 끝난 후 등장
+      .sub_text.show,
+      .click_me.show {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       .sub_text {

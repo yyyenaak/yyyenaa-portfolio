@@ -7,14 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var skillBacks = document.querySelectorAll(".skill_back");
 
   function revealText(element, delay) {
-    var showElement = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
     var letters = element.textContent.split("");
-    element.textContent = ""; // 기존 텍스트 비우기
-
-    if (showElement) {
-      element.style.opacity = "1"; // "조예나" 나타나도록 설정
-    }
-
+    element.textContent = "";
     letters.forEach(function (letter, index) {
       var span = document.createElement("span");
       span.textContent = letter;
@@ -22,14 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
       element.appendChild(span);
     });
-  } // "Yena, Jo" 먼저 등장
+  } // "Yena, Jo" 먼저 타이핑
 
 
-  revealText(document.querySelector(".sub_text2"), 1); // 1초 후 등장
+  revealText(document.querySelector(".sub_text2"), 0); // "조예나"는 0.8초 후 타이핑
 
   setTimeout(function () {
-    revealText(document.querySelector(".main_text"), 1, true);
-  }, 2000); // 햄버거 버튼 클릭 시 네비 열기/닫기
+    var mainText = document.querySelector(".main_text");
+    mainText.style.opacity = "1"; // "조예나" 보이도록 설정
+
+    revealText(mainText, 0.8);
+  }, 2000); // 설명 & 버튼을 타이핑 효과가 끝난 후 한 번에 나타나게 설정
+
+  setTimeout(function () {
+    document.querySelector(".sub_text").classList.add("show");
+    document.querySelector(".click_me").classList.add("show");
+  }, 4000); // "조예나" 타이핑 끝나는 시점에서 실행
+  // 햄버거 버튼 클릭 시 네비 열기/닫기
 
   hamburger.addEventListener("click", function () {
     if (mobileMenu.classList.contains("active")) {
