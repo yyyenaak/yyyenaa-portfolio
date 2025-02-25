@@ -988,7 +988,6 @@ main .underbtn:active:after {
   .porjectzone .card {
     width: 100%;
     height: auto;
-    margin-bottom: 2rem;
   }
   .porjectzone .card-front {
     height: auto;
