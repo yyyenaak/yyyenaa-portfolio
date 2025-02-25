@@ -992,7 +992,7 @@ main .underbtn:active:after {
   .porjectzone .card-front {
     height: auto;
   }
-  .porjectzone .project_summary {
+  .porjectzone s .project_summary {
     gap: 0.5rem;
     font-size: 0.85rem;
   }
