@@ -12,66 +12,31 @@ document.addEventListener("DOMContentLoaded", function () {
     letters.forEach(function (letter, index) {
       var span = document.createElement("span");
       span.textContent = letter;
-      span.style.animationDelay = "".concat(delay + index * 0.2, "s"); // 0.2초 간격으로 등장
-
+      span.style.animationDelay = "".concat(delay + index * 0.2, "s");
       element.appendChild(span);
     });
-  } // "Yena, Jo" 먼저 타이핑
+  }
 
-
-  revealText(document.querySelector(".sub_text2"), 0); // "조예나"는 0.8초 후 타이핑
-
+  revealText(document.querySelector(".sub_text2"), 0);
   setTimeout(function () {
     var mainText = document.querySelector(".main_text");
-    mainText.style.opacity = "1"; // "조예나" 보이도록 설정
-
+    mainText.style.opacity = "1";
     revealText(mainText, 0.8);
-  }, 2000); // 설명 & 버튼을 타이핑 효과가 끝난 후 한 번에 나타나게 설정
-
+  }, 2000);
   setTimeout(function () {
     document.querySelector(".sub_text").classList.add("show");
     document.querySelector(".click_me").classList.add("show");
-  }, 4000); // "조예나" 타이핑 끝나는 시점에서 실행
-  // 햄버거 버튼 클릭 시 네비 열기/닫기
+  }, 4000); // 햄버거 메뉴 토글
 
   hamburger.addEventListener("click", function () {
-    if (mobileMenu.classList.contains("active")) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
-
-  function openMenu() {
-    hamburger.classList.add("active");
-    mobileMenu.classList.remove("closing");
-    mobileMenu.classList.add("active");
-  }
-
-  function closeMenu() {
-    hamburger.classList.remove("active");
-    mobileMenu.classList.remove("active");
-    mobileMenu.classList.add("closing");
-    setTimeout(function () {
-      mobileMenu.classList.remove("closing");
-    }, 300);
-  } // 메뉴 외부 클릭 시 메뉴 닫기
-
+    mobileMenu.classList.toggle("active");
+  }); // 메뉴 외부 클릭 시 닫기
 
   document.addEventListener("click", function (event) {
-    var isClickInside = hamburger.contains(event.target) || mobileMenu.contains(event.target);
-
-    if (!isClickInside) {
-      closeMenu();
+    if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+      mobileMenu.classList.remove("active");
     }
-  }); // 메뉴 항목 클릭 시 메뉴 닫기
-
-  var menuItems = mobileMenu.querySelectorAll(".navi_font");
-  menuItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-      closeMenu();
-    });
-  }); // skill 모바일 여닫기(클릭 시 아래로 펼쳐지게)
+  }); // skill 모바일 여닫기
 
   skillBacks.forEach(function (skillBack) {
     skillBack.addEventListener("click", function () {
@@ -94,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300);
       }
     });
-  }); // Project 스크롤 시 카드뷰 보이게
+  }); // Project 카드 애니메이션
 
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -108,35 +73,63 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   cards.forEach(function (card) {
     return observer.observe(card);
-  }); // Modal 열기
+  });
+  /*** Modal 관련 코드 ***/
 
   function openPopup(modalId) {
     var modal = document.getElementById(modalId);
+    if (!modal) return;
     modal.style.display = "flex";
-    setTimeout(function () {
+    requestAnimationFrame(function () {
       modal.classList.add("active");
-    }, 10);
-  } // Modal 닫기 (X 버튼 클릭 시)
+    }); // ESC 키 닫기 이벤트 추가
 
+    document.addEventListener("keydown", escKeyClose);
+  }
+
+  function closePopup(modalId) {
+    var modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.classList.remove("active");
+    modal.addEventListener("transitionend", function () {
+      if (!modal.classList.contains("active")) {
+        modal.style.display = "none";
+      }
+    }, {
+      once: true
+    }); // ESC 키 닫기 이벤트 제거
+
+    document.removeEventListener("keydown", escKeyClose);
+  }
+
+  function escKeyClose(event) {
+    if (event.key === "Escape") {
+      document.querySelectorAll(".modal.active").forEach(function (modal) {
+        closePopup(modal.id);
+      });
+    }
+  } // "자세히" 버튼 클릭 이벤트
+
+
+  document.querySelectorAll(".card-btn").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var modalId = this.getAttribute("onclick").match(/'([^']+)'/)[1];
+      openPopup(modalId);
+    });
+  }); // X 버튼으로 모달 닫기
 
   document.querySelectorAll(".close-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var modal = this.closest(".modal");
+      if (modal) closePopup(modal.id);
+    });
+  }); // 모달 외부 클릭 시 닫기
 
-      if (modal) {
+  document.querySelectorAll(".modal").forEach(function (modal) {
+    modal.addEventListener("click", function (event) {
+      if (event.target.classList.contains("modal")) {
         closePopup(modal.id);
       }
     });
-  }); // Modal 닫기 함수
-
-  function closePopup(modalId) {
-    var modal = document.getElementById(modalId);
-
-    if (modal) {
-      modal.classList.remove("active");
-      setTimeout(function () {
-        modal.style.display = "none";
-      }, 300);
-    }
-  }
+  });
 });
