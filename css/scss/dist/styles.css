@@ -425,6 +425,7 @@ main .main_top .main_textzone .sub_text .hello_text {
   color: #2973cc;
   text-decoration-line: underline;
   text-decoration-color: #184567;
+  text-underline-offset: 3px;
 }
 @media (max-width: 768px) {
   main .main_top .main_textzone .sub_text {
